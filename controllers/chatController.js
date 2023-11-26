@@ -42,8 +42,6 @@ const getChats = asyncHandler(async (req, res) => {
 //get chat
 //get request
 const getChat = asyncHandler(async (req, res) => {
-  // if (!req.body.user) req.body.user = req.user.id;
-  // const userId = req.params.userId;
   const { firstId, secondId } = req.params;
   try {
     const chat = await Chat.findOne({
