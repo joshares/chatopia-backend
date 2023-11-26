@@ -10,6 +10,9 @@
   },
   "author": "joshua",
   "license": "ISC",
+  "engines": {
+    "node": ">=16.20.1"
+  },
   "dependencies": {
     "bcrypt": "^5.1.1",
     "cookie-parser": "^1.4.6",
