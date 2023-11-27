@@ -40,6 +40,7 @@ const createSendToken = (user, statusCode, res) => {
     ),
     secure: true,
     httpOnly: true,
+    sameSite: "None",
   };
 
   // if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
