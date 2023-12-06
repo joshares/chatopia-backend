@@ -9,6 +9,7 @@ router.route("/").get(validateToken, (req, res) => {
 
   // Respond with user information
   res.status(200).json({ user });
+  console.log("User:", user);
 });
 
 module.exports = router;
