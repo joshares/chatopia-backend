@@ -218,7 +218,13 @@ const deleteUser = asyncHandler(async (req, res, next) => {
   });
 });
 const logoutUser = asyncHandler(async (req, res, next) => {
-  res.clearCookie("jwt");
+  const cookieOptions = {
+    expires: new Date(0),
+    secure: true,
+    httpOnly: true,
+    sameSite: "None",
+  };
+  res.clearCookie("jwt", cookieOptions);
 
   res.status(200).json({ message: "Logout successful" });
 });
